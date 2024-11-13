@@ -1,0 +1,1471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body{
+    overflow: hidden;
+    margin: 0;
+    height: 2790px;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+
+/* Navbar Styles */
+.navbar {
+    background-color: #f8f9fa;  /* Light background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow */
+    display: flex;  /* Flexbox enabled */
+    justify-content: space-between;  /* Space out the items: brand on the left, nav on the right */
+    align-items: center;  /* Vertically align items */
+    padding: 0 20px;  /* Optional: Add padding to the left and right */
+}
+
+.navbar-brand {
+    font-size: 24px;  /* Logo size */
+}
+
+/* The navbar-toggler button for mobile */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Align the navbar links to the right */
+.navbar-nav {
+    display: flex;  /* Enable Flexbox */
+    margin-left: auto;  /* Push the links to the right */
+}
+
+/* Navbar link styles */
+.nav-link {
+    color: #343a40;  /* Text color */
+    font-size: 18px;  /* Font size for the nav links */
+    margin-left: 20px;  /* Space between nav links */
+    transition: color 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+.nav-link:hover {
+    color: #007bff;  /* Hover color */
+}
+
+.sp1{
+    margin-left: 20px;
+}
+
+/* Optional: For small screens, keep the links in a vertical stack */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;  /* Stack the links vertically on small screens */
+        align-items: start;  /* Center the items in mobile view */
+        margin-left: 25px;  /* Remove left margin */
+    }
+
+    .nav-link {
+        margin-left: 0;  /* No margin on the left for stacked links */
+        margin-bottom: 10px;  /* Space between stacked links */
+        font-size: 18px;
+    }
+}
+
+
+.section-padding-13{
+    width: 100%;
+    height: 850px;
+    margin-top: 120px;
+}
+
+/* Background container */
+.background-container {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: space-between; /* Distribute content evenly */
+    position: relative;
+    height: 700px; /* Full viewport height */
+    background-image: url('./baclground\ image.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+
+/* Content section */
+.content {
+    z-index: 2; /* Ensure content is above overlay */
+    color: #333;
+    text-align: center; /* Center content */
+    width: 50%; /* Adjust to desired width */
+    max-width: 800px; /* Max width for large screens */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Heading style */
+h1 {
+    font-size: 2.5rem; /* Adjust font size */
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Paragraph container */
+.para-container {
+    display: flex;
+    flex-direction: column; /* Stack paragraphs vertically */
+    width: 100%;
+}
+
+/* Paragraph style */
+.para9 {
+    font-size: 1.2em; /* Adjust font size */
+    line-height: 1.5;
+    color: black;
+    width: 100%;
+    text-align: justify; /* Justify text */
+    box-sizing: border-box;
+    margin: 10px 0; /* Add space between paragraphs */
+}
+
+/* Right background image */
+.right-background-image {
+    position: relative;
+    width: 40%; /* Adjust width */
+    height: 100%; /* Full height */
+    background-image: url('./left\ image.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0; /* Make sure it's behind content */
+}
+
+@media (max-width: 1024px) {
+    body{
+        height: auto;
+    }
+
+    .section-padding-13{
+        width: 100%;
+        height: 750px;
+    }
+    .background-container {
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        height: auto; /* Allow height to be flexible */
+        padding: 20px 10px; /* Adjust padding */
+    }
+
+    .content {
+        width: 80%; /* Increase width to take up more space on medium screens */
+        max-width: none; /* Remove max-width for better flexibility */
+        padding: 20px;
+        text-align: center; /* Keep text centered */
+    }
+
+    .right-background-image {
+        width: 50%; /* Make the background image fill the full width */
+        height: 300px; /* Adjust height */
+        background-size: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1; /* Keep it behind the content */
+    }
+
+    h1 {
+        font-size: 38px !important; /* Reduce font size for smaller screens */
+        margin-bottom: 15px; /* Reduce bottom margin */
+    }
+
+    .para9 {
+        font-size: 1.3em !important; /* Adjust paragraph font size */
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1100px) {
+    .background-container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+    }
+
+    .content {
+        width: 90%; /* Take up more space on smaller screens */
+        text-align: left; /* Align text to the left */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust heading size */
+        margin-left: 0;
+    }
+
+    .para9 {
+        font-size: 1.1em; /* Slightly smaller text */
+    }
+
+    .right-background-image {
+        width: 100%; /* Make right image take full width */
+        height: 300px; /* Reduce image height for smaller screens */
+        z-index: -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-padding-13{
+        width: 100%;
+        height: 900px;
+    }
+    .content {
+        width: 100%; /* Content takes up full width */
+        text-align: center; /* Center text */
+    }
+
+    .right-background-image {
+        height: 200px; /* Further reduce height for mobile */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Adjust heading size for small screens */
+    }
+
+    .para9 {
+        font-size: 1em; /* Reduce font size for smaller screens */
+    }
+}
+
+@media (max-width: 476px) {
+    .section-padding-13{
+        width: 100%;
+        height: 1100px;
+        margin-top: 0px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .background-container {
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    h1 {
+        margin-left: 0; /* Center heading */
+        margin-top: 120px; /* Reduce top margin */
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .para-container {
+        width: 90%; /* Increase width for smaller screens */
+        margin: 0 auto; /* Center container */
+    }
+
+    .para9 {
+        left: 0; /* Reset left position */
+        font-size: 16px; /* Adjust font size for readability */
+        margin: 10px 0; /* Adjust margin for spacing */
+    }
+
+    .right-background-image {
+        position: relative; /* Change to relative for better flow */
+        top: 0; /* Reset top position */
+        left: 10px; /* Reset left position */
+        width: 100%; /* Full width on smaller screens */
+        height: 650px; /* Adjust height for visibility */
+        background-size: cover; /* Ensure image covers area */
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 28px !important; /* Adjust font size for smaller screens */
+    }
+
+    .para9 {
+        left: 0; /* Reset left position */
+        font-size: 18px !important; /* Adjust font size for readability */
+        margin: 10px 0; /* Adjust margin for spacing */
+    }
+
+}
+
+@media (max-width: 434px){
+    .section-padding-13{
+        width: 100%;
+        height: 1100px;
+        margin-top: 0px;
+    }
+
+    h1 {
+        font-size: 26px !important; /* Adjust font size for smaller screens */
+    }
+
+    .para9 {
+        left: 0; /* Reset left position */
+        font-size: 17px !important; /* Adjust font size for readability */
+        margin: 10px 0; /* Adjust margin for spacing */
+    }
+}
+
+@media (max-width: 436px){
+    .section-padding-13{
+        width: 100%;
+        height: 1100px;
+        margin-top: 0px;
+    }
+
+    h1 {
+        font-size: 25px !important; /* Adjust font size for smaller screens */
+    }
+
+    .para9 {
+        left: 0; /* Reset left position */
+        font-size: 17px !important; /* Adjust font size for readability */
+        margin: 10px 0; /* Adjust margin for spacing */
+    }
+
+}
+
+@media (max-width: 414px){
+    .section-padding-13{
+        width: 100% !important;
+        height: 1050px !important;
+    }
+
+    .para9 {
+        left: 0; /* Reset left position */
+        font-size: 16px !important; /* Adjust font size for readability */
+        margin: 10px 0; /* Adjust margin for spacing */
+    }
+    
+}
+
+@media (max-width: 386px){
+    h1 {
+        font-size: 24px !important; /* Adjust font size for smaller screens */
+    }
+    .para9 {
+        left: 0; /* Reset left position */
+        font-size: 15px !important; /* Adjust font size for readability */
+        margin: 10px 0; /* Adjust margin for spacing */
+    }
+}
+
+@media (max-width: 336px){
+    h1 {
+        font-size: 24px !important; /* Adjust font size for smaller screens */
+    }
+    .para9 {
+        left: 0; /* Reset left position */
+        font-size: 13px !important; /* Adjust font size for readability */
+        margin: 10px 0; /* Adjust margin for spacing */
+    }
+    .section-padding-13{
+        width: 100% !important;
+        height: 910px !important;
+    }
+}
+
+@media (max-width: 320px){
+    .section-padding-13{
+        width: 100% !important;
+        height: 500px !important;
+    }
+    h1 {
+        font-size: 20px !important; /* Adjust font size for smaller screens */
+    }
+    .para9 {
+        left: 0; /* Reset left position */
+        font-size: 13px !important; /* Adjust font size for readability */
+        margin: 10px 0; /* Adjust margin for spacing */
+    }
+    .section-padding-13{
+        width: 100% !important;
+        height: 910px !important;
+    }
+}
+
+.section-padding-14{
+    width: 100%;
+    height: 780px;
+    /* margin-top: 200px; */
+}
+.background-container1 {
+    position: relative;
+    /* top: 400px; */
+    height: 100vh; /* Full viewport height */
+    background-image: url('./baclground\ image.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.why-travel {
+    display: flex;
+    justify-content: space-between; /* Flexbox to place items on the left and right */
+    width: 100%;
+    max-width: 1200px; /* Max width for large screens */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Left Image Container */
+.col-img {
+    flex: 1; /* Make this column flexible */
+    display: flex;
+    justify-content: center; /* Center images */
+    flex-direction: column; /* Stack images vertically */
+    gap: 20px; 
+}
+
+/* Image Styles */
+.img6,
+.img7 {
+    margin-top: 300px;
+    width: 100%; /* Make images responsive */
+    border-radius: 10px;
+    border: 10px solid white;
+}
+
+.img6 {
+    height: auto; /* Auto adjust the height to maintain aspect ratio */
+}
+
+.img7 {
+    width: 80%;
+    height: auto;
+    margin-top: -50px;
+    margin-left: -40px;
+}
+
+/* Text Column */
+.col-text {
+    flex: 1; /* Make this column flexible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    align-items: flex-start; /* Align text to the left */
+    padding-left: 40px;
+}
+
+/* Heading Style */
+.head27 {
+    margin-top: 300px;
+    font-size: 32px; /* Adjust font size */
+    color: black;
+    /* margin-bottom: 15px; */
+}
+
+/* Paragraph Style */
+.para10 {
+    font-size: 15px; /* Adjust font size */
+    line-height: 1.5;
+    color: black;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+/* Button Style */
+.btn7 {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn7:hover {
+    color: black;
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.btn7:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 1200px) {
+    .img7 {
+        width: 80%;
+        height: auto;
+        margin-left: 0px;
+    }
+
+    .img6 {
+        width: 90%;
+        margin-left: 80px;
+        height: auto; /* Auto adjust the height to maintain aspect ratio */
+    }
+
+    .btn7 {
+        font-size: 16px !important;
+        padding: 5px 10px;
+       
+    }
+}
+
+@media (max-width: 1024px) {
+    .background-container1 {
+        height: auto; /* Allow height to adjust automatically */
+        padding: 30px 10px; /* Add padding for smaller screens */
+    }
+
+    .why-travel {
+        flex-direction: column; /* Stack the content vertically */
+        align-items: center; /* Center-align the content */
+        padding: 20px 10px; /* Add some padding on the sides */
+    }
+
+    /* Adjust Image Container */
+    .col-img {
+        flex: 0 0 100%; /* Make image container take full width */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Adjust Image Sizes */
+    .img6,
+    .img7 {
+        width: 50%; /* Make images smaller and responsive */
+        margin-top: 20px;
+    }
+
+    .img7 {
+        margin-top: -39px;
+        margin-left: -280px;
+        width: 50%;
+    }
+
+    /* Adjust Text Container */
+    .col-text {
+        flex: 0 0 100%; /* Make text container take full width */
+        padding-left: 0; /* Remove left padding */
+        text-align: center; /* Center text */
+        align-items: center; /* Align text to center */
+    }
+
+    .head27 {
+        margin-top: 20px; /* Adjust margin */
+        font-size: 28px; /* Adjust font size for readability */
+    }
+
+    .para10 {
+        font-size: 17px; /* Adjust font size */
+        margin-bottom: 10px;
+    }
+
+    .btn7 {
+        margin-top: 12px;
+        padding: 12px 30px; /* Increase padding for better clickability */
+        font-size: 18px; /* Increase font size for mobile devices */
+    }
+}
+/* For responsiveness (Medium screens and below) */
+@media (max-width: 768px) {
+    .section-padding-14{
+        width: 100%;
+        height: 600px;
+    }
+    .background-container1 {
+        background-position: center;
+    }
+
+    .why-travel {
+        flex-direction: column; /* Stack items vertically */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col-img {
+        width: 100%; /* Take full width on smaller screens */
+        gap: 10px; /* Less space between images */
+    }
+
+    .img6 {
+        width: 50%; /* Adjust image width */
+        height: auto; /* Auto height for better aspect ratio */
+    }
+
+    .img7 {
+        width: 50%;
+        height: auto;
+    }
+
+    .col-text {
+        width: 100%; /* Full width for text */
+        padding: 10px;
+        text-align: center; /* Center text */
+    }
+
+    .head27 {
+        font-size: 28px; /* Slightly smaller font size */
+    }
+
+    .para10 {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .btn7 {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 476px) {
+    .section-padding-14{
+        width: 100%;
+        height: 400px;
+    }
+}
+
+/* For small screens (Mobile) */
+@media (max-width: 480px) {
+    .background-container1 {
+        background-position: center;
+    }
+
+    .why-travel {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col-img {
+        width: 100%;
+        gap: 5px;
+    }
+
+    .img6,
+    .img7 {
+        width: 90%; /* Full width for mobile */
+        height: auto;
+    }
+
+    .col-text {
+        width: 90%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .head27 {
+        font-size: 24px; /* Smaller font size for mobile */
+    }
+
+    .para10 {
+        font-size: 13px; /* Adjust font size for mobile */
+    }
+
+    .btn7 {
+        width: 100%;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    .img6 {
+        width: 50%; /* Adjust image width */
+        height: auto; /* Auto height for better aspect ratio */
+
+    }
+
+    .img7 {
+        width: 50%;
+        height: auto;
+        margin-left: -120px;
+    }
+}
+
+
+/* General Styling */
+.section-padding-15 {
+    width: 100%;
+    height: 300px;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.heading h1 {
+    font-size: 35px; /* Large font size for main heading */
+    margin-bottom: 10px;
+}
+
+.heading h2 {
+    font-size: 26px;
+    color: black;
+}
+
+/* Image Container Styling */
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensure images wrap in rows */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Align images vertically */
+    gap: 10px; /* Add space between images */
+    padding: 30px;
+}
+
+/* Image Styling */
+.image {
+    width: 230px; /* Set fixed width for images */
+    height: 180px; /* Set fixed height for images to maintain aspect ratio */
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+@media (max-width: 1200px) {
+    .image-container {
+        flex-direction: row; /* Stack images vertically */
+        gap: 15px; /* Increase gap between images for better spacing */
+        padding: 20px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 220px; /* Slightly smaller image size for smaller screens */
+        height: 180px; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 1100px) {
+
+    .image-container {
+        flex-direction: row;
+}
+
+.image {
+    width: 200px; /* Slightly smaller image size for smaller screens */
+    height: 180px; /* Adjust height to maintain aspect ratio */
+}
+}
+@media (max-width: 1024px) {
+    .section-padding-15 {
+        width: 100%;
+        height: 700px;
+    }
+    /* Adjust Heading Font Size */
+    .heading h1 {
+        font-size: 28px; /* Smaller font size for H1 */
+    }
+
+    .heading h2 {
+        font-size: 22px; /* Smaller font size for H2 */
+    }
+
+    /* Image Container Adjustments */
+    .image-container {
+        flex-direction: row; /* Stack images vertically */
+        gap: 15px; /* Increase gap between images for better spacing */
+        padding: 20px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 180px; /* Slightly smaller image size for smaller screens */
+        height: 150px; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 1016px) {
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 15px; /* Increase gap between images for better spacing */
+        padding: 20px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 160px !important; /* Slightly smaller image size for smaller screens */
+        height: 150px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 1029.33px) {
+    .image-container {
+        flex-direction: row; /* Stack images vertically */
+        gap: 15px; /* Increase gap between images for better spacing */
+        padding: 20px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 180px; /* Slightly smaller image size for smaller screens */
+        height: 150px; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 916px) {
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 15px; /* Increase gap between images for better spacing */
+        padding: 20px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 150px !important; /* Slightly smaller image size for smaller screens */
+        height: 150px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 866px) {
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 15px; /* Increase gap between images for better spacing */
+        padding: 20px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 148px !important; /* Slightly smaller image size for smaller screens */
+        height: 145px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 856px) {
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 15px; /* Increase gap between images for better spacing */
+        padding: 20px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 140px !important; /* Slightly smaller image size for smaller screens */
+        height: 145px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 816px) {
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 15px; /* Increase gap between images for better spacing */
+        padding: 20px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 135px !important; /* Slightly smaller image size for smaller screens */
+        height: 140px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 791.33px) {
+    .image-container {
+        justify-content: space-between; /* Spread images evenly on medium screens */
+    }
+
+    /* Adjust image size for medium screens */
+    .image {
+        width: 130px !important; /* Reduce the width for medium screens */
+        height: 135px !important; /* Adjust height for better aspect ratio */
+    }
+}
+
+
+
+
+
+@media (max-width: 766px) {
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 0px !important; /* Increase gap between images for better spacing */
+        padding: 20px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 135px !important; /* Slightly smaller image size for smaller screens */
+        height: 135px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    /* Adjusting the heading text on smaller screens */
+    .heading h1 {
+        font-size: 32px; /* Smaller font size */
+    }
+
+    .heading h2 {
+        font-size: 24px; /* Smaller font size */
+    }
+
+    /* Image container adjustments */
+    .image-container {
+        justify-content: space-between; /* Spread images evenly on medium screens */
+    }
+
+    /* Adjust image size for medium screens */
+    .image {
+        width: 145px; /* Reduce the width for medium screens */
+        height: 140px; /* Adjust height for better aspect ratio */
+    }
+}
+
+@media (max-width: 730px) {
+    .section-padding-15{
+        width: 100%;
+        height: 650px;
+    }
+    
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 0px !important; /* Increase gap between images for better spacing */
+        padding: 20px; /* Adjust padding */
+    }
+    
+    /* Image Styling */
+    .image {
+        width: 125px !important; /* Set fixed width for images */
+        height: 125px !important; /* Set fixed height for images to maintain aspect ratio */
+        border-radius: 10px;
+        transition: transform 0.3s ease; /* Smooth scaling effect */
+    }
+}
+
+
+
+@media (max-width: 680px) {
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 0px !important; /* Increase gap between images for better spacing */
+        padding: 20px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 120px !important; /* Slightly smaller image size for smaller screens */
+        height: 125px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 656px) {
+    .section-padding-15{
+        width: 100% !important;
+        height: 750px !important;
+    }
+
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 0px !important; /* Increase gap between images for better spacing */
+        padding: 20px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 110px !important; /* Slightly smaller image size for smaller screens */
+        height: 115px !important; /* Adjust height to maintain aspect ratio */
+    }
+    
+}
+
+
+@media (max-width: 606px) {
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 0px !important; /* Increase gap between images for better spacing */
+        padding: 20px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 100px !important; /* Slightly smaller image size for smaller screens */
+        height: 105px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    /* Adjusting the heading text on small screens */
+    .heading h1 {
+        font-size: 29px; /* Even smaller font size */
+    }
+
+    .heading h2 {
+        font-size: 22px; /* Smaller font size for h2 */
+    }
+
+    /* Image container adjustments */
+    .image-container {
+        flex-direction: column; /* Stack images vertically on small screens */
+        justify-content: center; /* Center images */
+    }
+
+    /* Adjust image size for small screens */
+    .image {
+        width: 95px; /* Even smaller width */
+        height: 80px; /* Maintain aspect ratio */
+        margin-bottom: 10px; /* Space between images */
+    }
+}
+
+@media (max-width: 500px) {
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 0px !important; /* Increase gap between images for better spacing */
+        padding: 20px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 80px !important; /* Slightly smaller image size for smaller screens */
+        height: 95px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 476px) {
+    .section-padding-15{
+        width: 100% !important;
+        height: 680px !important;
+    }
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 5px !important; /* Increase gap between images for better spacing */
+        padding: 0px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 85px !important; /* Slightly smaller image size for smaller screens */
+        height: 80px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 440px) {
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 5px !important; /* Increase gap between images for better spacing */
+        padding: 0px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 80px !important; /* Slightly smaller image size for smaller screens */
+        height: 80px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 456px) {
+    .section-padding-15{
+        width: 100% !important;
+        height: 720px !important;
+    }
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 5px !important; /* Increase gap between images for better spacing */
+        padding: 0px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 80px !important; /* Slightly smaller image size for smaller screens */
+        height: 80px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 434px){
+    .section-padding-15{
+        width: 100% !important;
+        height: 730px !important;
+    }
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 5px !important; /* Increase gap between images for better spacing */
+        padding: 0px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 75px !important; /* Slightly smaller image size for smaller screens */
+        height: 75px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+
+@media (max-width: 436px){
+    .section-padding-15{
+        width: 100% !important;
+        height: 730px !important;
+    }
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 5px !important; /* Increase gap between images for better spacing */
+        padding: 0px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 75px !important; /* Slightly smaller image size for smaller screens */
+        height: 75px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 414px){
+    .section-padding-15{
+        width: 100% !important;
+        height: 780px !important;
+    }
+}
+
+@media (max-width: 414px){
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 5px !important; /* Increase gap between images for better spacing */
+        padding: 0px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 70px !important; /* Slightly smaller image size for smaller screens */
+        height: 70px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 386px){
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 5px !important; /* Increase gap between images for better spacing */
+        padding: 0px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 65px !important; /* Slightly smaller image size for smaller screens */
+        height: 65px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 361.33px){
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 5px !important; /* Increase gap between images for better spacing */
+        padding: 0px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 60px !important; /* Slightly smaller image size for smaller screens */
+        height: 60px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 336px){
+    .image-container {
+        flex-direction: row !important; /* Stack images vertically */
+        gap: 5px !important; /* Increase gap between images for better spacing */
+        padding: 0px; /* Adjust padding */
+    }
+
+    /* Image Adjustments */
+    .image {
+        width: 55px !important; /* Slightly smaller image size for smaller screens */
+        height: 55px !important; /* Adjust height to maintain aspect ratio */
+    }
+}
+
+@media (max-width: 336px){
+    .section-padding-15{
+        width: 100% !important;
+        height: 930px !important;
+    }   
+}
+
+@media (max-width: 320px){
+    .section-padding-15{
+        width: 100% !important;
+        height: 940px !important;
+    } 
+}
+
+
+
+.footer1{
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 0 !important; 
+}
+
+
+.footer-bottom {
+    margin-top: 0 !important; /* Remove any margin from the top if it's adding unnecessary space */
+}
+
+.footer {
+    background-color:  #f8f9fa;
+    color: #333;
+    padding: 20px 0;
+   
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px; /* Ensures sections don't get too small */
+    margin: 20px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+#quick1{
+     margin-left: 25px;
+}
+
+.footer-section ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #454343;
+}
+
+.copy{
+    color: wheat;
+}
+
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icon {
+    color: #fff; /* Default color for icons */
+    margin: 0 10px;
+    font-size: 20px; /* Size of the icons */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.social-icon:hover {
+    color: #f39c12; /* Change color on hover */
+}
+
+.facebook{
+    color: #007bff;
+}
+
+.instagram {
+    color: rgb(247, 163, 177); /* Pink color for Instagram icon */
+}
+
+.instagram:hover {
+    color: #d5006d; /* Darker pink on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .footer-container {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .footer-section {
+        margin: 15px 0;
+    }
+}
+
+@media (max-width: 1028px) {
+    .footer-section h2 {
+        font-size: 18px; /* Slightly larger headings for readability */
+    }
+
+    #quick1{
+        margin-left: -0px;
+   }
+
+   .footer-section ul li a {
+    margin-left: -30px;
+}
+
+.footer-section p{
+    width: 550px !important;
+}
+}
+
+@media (max-width: 1029px) {
+    .footer-section {
+        flex: 1 1 100%; /* Stacks sections on smaller screens */
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer-section h2 {
+        font-size: 18px; /* Slightly larger headings for readability */
+    }
+}
+
+@media (max-width: 1026px) {
+    .footer-section h2 {
+        font-size: 18px; /* Slightly larger headings for readability */
+    }
+
+    #quick1{
+        margin-left: -0px;
+   }
+
+   .footer-section ul li a {
+    margin-left: -30px;
+}
+}
+
+
+
+
+@media (max-width: 886px) {
+    .footer-section p {
+        font-size: 13px; /* Adjust paragraph size */
+    }
+}
+
+@media (max-width: 862px) {
+    .footer-section ul li a {
+        font-size: 13px; /* Adjust link size */
+    }
+}
+
+
+
+@media (max-width: 840px) {
+    .footer {
+        padding: 15px 0; /* Adjust padding */
+    }
+}
+
+@media (max-width: 814px) {
+    .footer-section {
+        margin: 10px 0;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .footer-section h2 {
+        font-size: 16px; /* Adjust heading size */
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-section p,
+    .footer-section ul {
+        font-size: 12px; /* Smaller text for very small screens */
+    }
+}
+
+@media (max-width: 540px) {
+    .footer-section {
+        margin: 5px 0; /* Reduce margin */
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-bottom {
+        font-size: 12px; /* Adjust footer bottom text size */
+    }
+}
+
+@media (max-width: 476px) {
+    .footer-section {
+        padding: 5px; /* Reduce padding */
+    }
+}
+
+@media (max-width: 440px) {
+    .social-icon {
+        font-size: 18px; /* Smaller icons */
+    }
+}
+
+@media (max-width: 414px) {
+    .footer {
+        padding: 10px 0; /* Further reduce padding */
+    }
+}
+
+@media (max-width: 400px) {
+    .footer-section h2 {
+        font-size: 14px; /* Further reduce heading size */
+    }
+}
+
+@media (max-width: 376px) {
+    .footer-section p,
+    .footer-section ul {
+        font-size: 11px; /* Further reduce paragraph size */
+    }
+}
+
+@media (max-width: 380px) {
+    .footer-section {
+        margin: 5px 0; /* Adjust margin for very small screens */
+    }
+}
+
+@media (max-width: 350px) {
+    .footer {
+        padding: 5px 0; /* Minimal padding for very small screens */
+    }
+}
+
+@media (max-width: 330px) {
+    .social-icon {
+        font-size: 16px; /* Further reduce icon size */
+    }
+}
+
+@media (max-width: 320px) {
+    .footer-section h2 {
+        font-size: 12px; /* Smallest heading size */
+    }
+}
+
+
+
+
+
+
